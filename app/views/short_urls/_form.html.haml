@@ -8,8 +8,7 @@
   .row
     .field.col-sm-8
       .input-group
-        = f.label :url
-        = f.text_field :url, size: 110
+        = f.text_field :url, size: 110 , placeholder: 'Paste the url to shorten'
     .col-sm-4
       .actions
-        = f.submit 'Short' ,class: 'btn btn-default'
+        = f.submit 'Short it' ,class: 'btn btn-primary shorten-button'
