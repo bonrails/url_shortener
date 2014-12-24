@@ -4,9 +4,7 @@
   %b Url:
   = @short_url.url
 %p
-  %b Uid:
-  = @short_url.uid
+  %b Shortend Url :
+  = request.protocol + request.host+ '/'+@short_url.uid
 
-= link_to 'Edit', edit_short_url_path(@short_url)
-\|
-= link_to 'Back', short_urls_path
+= link_to 'Home', root_path

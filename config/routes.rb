@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :short_urls
+  resources :short_urls , only: [:new, :show, :create]
   root 'short_urls#new'
+  get '/:uid', to: 'short_urls#by_uid', constraints: { uid: /\w.+/ }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

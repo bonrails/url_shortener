@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 group :test, :development do
   gem 'rspec-rails'
   gem 'pry'
+  gem 'shoulda-matchers'
 end
 
 # Use jquery as the JavaScript library
