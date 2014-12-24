@@ -1,10 +1,15 @@
-%p#notice= notice
+.well.bg-info
+  %p#notice= notice
 
-%p
-  %b Url:
-  = @short_url.url
-%p
-  %b Shortend Url :
-  = request.protocol + request.host+ '/'+@short_url.uid
-
-= link_to 'Home', root_path
+  .row.bg-info
+    .col-sm-2.label.label-primary
+      %h4 Url
+    .col-sm-10
+      %h4
+        = @short_url.url
+  .row.bg-warning
+    .col-sm-2.label.label-success
+      %h4 Shortend Url
+    .col-sm-10
+      %h4
+        = request.protocol + request.host+ '/'+@short_url.uid
